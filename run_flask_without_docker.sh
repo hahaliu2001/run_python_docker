@@ -10,8 +10,10 @@ source .venv/bin/activate
 
 python -m pip  install flask
 python -m pip  install Flask
+python -m pip  install pipreqs
 
-python -m pip freeze > Requirements.txt
+#python -m pip freeze > Requirements.txt
+pipreqs Requirements.txt
 
 export FLASK_APP=src/main.py
 python -m flask run --host=0.0.0.0 --port=5000
